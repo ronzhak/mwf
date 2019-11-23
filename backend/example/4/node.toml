@@ -1,0 +1,63 @@
+consensus_public_key = "9944a174975171899430f4719d84418547ae8d6872edee531f28a1396c6fc904"
+consensus_secret_key = "D:\\Dev\\ITUniver\\exonum\\examples\\cryptocurrency-advanced\\backend\\example/4\\consensus.key.toml"
+external_address = "127.0.0.1:6334"
+listen_address = "0.0.0.0:6334"
+service_public_key = "29a2fe726e1dab7c7b8f7c96bd50088e57fe84146bd155d2cc0080870b31b6ad"
+service_secret_key = "D:\\Dev\\ITUniver\\exonum\\examples\\cryptocurrency-advanced\\backend\\example/4\\service.key.toml"
+
+[api]
+private_api_address = "0.0.0.0:8094"
+public_api_address = "0.0.0.0:8203"
+state_update_timeout = 10000
+[[connect_list.peers]]
+address = "127.0.0.1:6333"
+public_key = "4209b8529ffb08d06368e92991d2aa808b3c81461bdf16258da3b90dc468d9fa"
+
+[[connect_list.peers]]
+address = "127.0.0.1:6332"
+public_key = "4d711312fc29e87eed752d75b160f0d12aee4506b0efa0d3461de1988d6e654e"
+
+[[connect_list.peers]]
+address = "127.0.0.1:6331"
+public_key = "c3929aad3affebc8402c64f99e83d584fef13318142a5501f12ea51eb185ec04"
+
+[database]
+create_if_missing = true
+[[genesis.validator_keys]]
+consensus_key = "4209b8529ffb08d06368e92991d2aa808b3c81461bdf16258da3b90dc468d9fa"
+service_key = "aac78ce153c4cf456b1d4e41942d9d40335855a0e7484425e625a709c39f5bda"
+
+[[genesis.validator_keys]]
+consensus_key = "4d711312fc29e87eed752d75b160f0d12aee4506b0efa0d3461de1988d6e654e"
+service_key = "e48a4f3c6e6c706cba2d4245dfe715d48c36c63a355ee8026e272be2ad6b6007"
+
+[[genesis.validator_keys]]
+consensus_key = "9944a174975171899430f4719d84418547ae8d6872edee531f28a1396c6fc904"
+service_key = "29a2fe726e1dab7c7b8f7c96bd50088e57fe84146bd155d2cc0080870b31b6ad"
+
+[[genesis.validator_keys]]
+consensus_key = "c3929aad3affebc8402c64f99e83d584fef13318142a5501f12ea51eb185ec04"
+service_key = "749d2d41913b5599b5ae161593c0e93253c1a8566b38eb418d2cd74daa8d60ed"
+
+[genesis.consensus]
+first_round_timeout = 3000
+max_message_len = 1048576
+max_propose_timeout = 200
+min_propose_timeout = 10
+peers_timeout = 10000
+propose_timeout_threshold = 500
+status_timeout = 5000
+txs_block_limit = 1000
+[mempool.events_pool_capacity]
+api_requests_capacity = 1024
+internal_events_capacity = 128
+network_events_capacity = 512
+network_requests_capacity = 512
+
+[network]
+max_incoming_connections = 128
+max_outgoing_connections = 128
+tcp_connect_max_retries = 10
+tcp_connect_retry_timeout = 15000
+tcp_nodelay = true
+[services_configs.configuration_service]
